@@ -164,8 +164,8 @@
       },
       "mult_0": {
         "vlnv": "xilinx.com:module_ref:mult:1.0",
-        "xci_name": "pegboard_mult_0_1",
-        "xci_path": "ip/pegboard_mult_0_1/pegboard_mult_0_1.xci",
+        "xci_name": "pegboard_mult_0_0",
+        "xci_path": "ip/pegboard_mult_0_0/pegboard_mult_0_0.xci",
         "inst_hier_path": "mult_0",
         "reference_info": {
           "ref_type": "hdl",
