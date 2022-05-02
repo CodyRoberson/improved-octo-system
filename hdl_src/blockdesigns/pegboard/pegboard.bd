@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5FFAEDCA101CA7D4",
+      "boundary_crc": "0x656446B4656446B4",
       "device": "xc7z020clg400-1",
       "name": "pegboard",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -10,246 +10,56 @@
       "validated": "true"
     },
     "design_tree": {
-      "reg_0": "",
-      "adder_0": "",
-      "mult_0": ""
+      "prio_encoder_0": ""
     },
     "ports": {
-      "reset_n_0": {
-        "type": "rst",
+      "r_0": {
         "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "left": "4",
+        "right": "1"
       },
-      "a_0": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "b_1": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "d_0": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
-      "clk_0": {
-        "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "pegboard_clk_0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "default"
-          }
-        }
-      },
-      "q_0": {
+      "pcode_0": {
         "direction": "O",
-        "left": "7",
-        "right": "0"
-      },
-      "y_1": {
-        "direction": "O",
-        "left": "7",
-        "right": "0"
-      },
-      "a_1": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "b_0": {
-        "direction": "I",
-        "left": "1",
-        "right": "0"
-      },
-      "y_0": {
-        "direction": "O",
-        "left": "3",
+        "left": "2",
         "right": "0"
       }
     },
     "components": {
-      "reg_0": {
-        "vlnv": "xilinx.com:module_ref:reg:1.0",
-        "xci_name": "pegboard_reg_0_0",
-        "xci_path": "ip/pegboard_reg_0_0/pegboard_reg_0_0.xci",
-        "inst_hier_path": "reg_0",
+      "prio_encoder_0": {
+        "vlnv": "xilinx.com:module_ref:prio_encoder:1.0",
+        "xci_name": "pegboard_prio_encoder_0_0",
+        "xci_path": "ip/pegboard_prio_encoder_0_0/pegboard_prio_encoder_0_0.xci",
+        "inst_hier_path": "prio_encoder_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "reg",
+          "ref_name": "prio_encoder",
           "boundary_crc": "0x0"
         },
         "ports": {
-          "clk": {
-            "type": "clk",
+          "r": {
             "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "pegboard_clk_0",
-                "value_src": "default_prop"
-              }
-            }
+            "left": "4",
+            "right": "1"
           },
-          "reset_n": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "d": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "q": {
+          "pcode": {
             "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
-      "adder_0": {
-        "vlnv": "xilinx.com:module_ref:adder:1.0",
-        "xci_name": "pegboard_adder_0_0",
-        "xci_path": "ip/pegboard_adder_0_0/pegboard_adder_0_0.xci",
-        "inst_hier_path": "adder_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "adder",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "a": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "b": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "y": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
-      },
-      "mult_0": {
-        "vlnv": "xilinx.com:module_ref:mult:1.0",
-        "xci_name": "pegboard_mult_0_0",
-        "xci_path": "ip/pegboard_mult_0_0/pegboard_mult_0_0.xci",
-        "inst_hier_path": "mult_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "mult",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "a": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "b": {
-            "direction": "I",
-            "left": "1",
-            "right": "0"
-          },
-          "y": {
-            "direction": "O",
-            "left": "3",
+            "left": "2",
             "right": "0"
           }
         }
       }
     },
     "nets": {
-      "a_0_1": {
+      "prio_encoder_0_pcode": {
         "ports": [
-          "a_0",
-          "adder_0/a"
+          "prio_encoder_0/pcode",
+          "pcode_0"
         ]
       },
-      "a_1_1": {
+      "r_0_1": {
         "ports": [
-          "a_1",
-          "mult_0/a"
-        ]
-      },
-      "adder_0_y": {
-        "ports": [
-          "adder_0/y",
-          "y_1"
-        ]
-      },
-      "b_0_1": {
-        "ports": [
-          "b_0",
-          "mult_0/b"
-        ]
-      },
-      "b_1_1": {
-        "ports": [
-          "b_1",
-          "adder_0/b"
-        ]
-      },
-      "clk_0_1": {
-        "ports": [
-          "clk_0",
-          "reg_0/clk"
-        ]
-      },
-      "d_0_1": {
-        "ports": [
-          "d_0",
-          "reg_0/d"
-        ]
-      },
-      "mult_0_y": {
-        "ports": [
-          "mult_0/y",
-          "y_0"
-        ]
-      },
-      "reg_0_q": {
-        "ports": [
-          "reg_0/q",
-          "q_0"
-        ]
-      },
-      "reset_n_0_1": {
-        "ports": [
-          "reset_n_0",
-          "reg_0/reset_n"
+          "r_0",
+          "prio_encoder_0/r"
         ]
       }
     }
